@@ -11,24 +11,21 @@
 # (No fair for USians to just say use a "Forever" stamp and be done with it!)
 #
 
-import math
 def stamps(total):
-    fivep = 0
-    twop = 0
-    onep = 0
+    # Your code here
+    fivep=0
+    twop=0
+    onep=0
     if total >= 5:
-        fivep = math.floor(total / 5)
-        total = total - (5*fivep)
+        fivep=total/5
+        total=total%5
     if total >= 2:
-    	twop = math.floor(total / 2)
-    	total = total - (2*twop)
+        twop=total/2
+        total=total%2
     if total == 1:
-    	onep = 1
-
+        onep = 1
     return (fivep, twop, onep)
 
-
-    
 
 
 print stamps(8)
